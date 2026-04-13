@@ -1,7 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%
-    String loginUser = (String) session.getAttribute("loginUser");
-    if (loginUser == null) {
+    String username = (String) request.getAttribute("username");
+    String password = (String) request.getAttribute("password");
+    if (username == null || password == null) {
         response.sendRedirect("login.jsp");
         return;
     }
@@ -13,6 +14,8 @@
     <title>登录成功</title>
 </head>
 <body>
-    欢迎<%= loginUser %>登陆成功！
+    <h2>登录成功！</h2>
+    <p>用户名：<%= username %></p>
+    <p>密码：<%= password %></p>
 </body>
 </html>

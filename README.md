@@ -15,6 +15,11 @@ sencondTest
 ├── pom.xml
 └── src
     └── main
+        ├── java
+        │   └── org
+        │       └── example
+        │           └── servlet
+        │               └── LoginServlet.java
         └── webapp
             ├── login.jsp
             ├── server.jsp
@@ -42,7 +47,7 @@ mvn clean package
 
 4. 启动 Tomcat 后，在浏览器中访问对应页面。
 
-## 本次实验内容
+## 实验内容
 
 ### 1. request 对象信息获取实验
 
@@ -87,8 +92,43 @@ http://localhost:8080/sencondTest/requestInfo.jsp
 http://localhost:8080/sencondTest/login.jsp
 ```
 
+### 3. JSP + Servlet 登录验证实验
+
+页面流程：
+
+`login.jsp` -> `LoginServlet` -> `loginSuccess.jsp`
+
+Servlet 映射：
+
+`/loginServlet`
+
+功能说明：
+
+- `login.jsp` 通过表单向 `LoginServlet` 提交用户名和密码
+- 当用户名或密码为空时，Servlet 使用重定向返回 `login.jsp`
+- 当用户名为 `zhangsan` 且密码为 `123` 时，Servlet 使用请求转发进入 `loginSuccess.jsp`
+- `loginSuccess.jsp` 显示用户输入的用户名和密码
+- 当账号密码填写完整但不正确时，Servlet 同样重定向回 `login.jsp`
+
+转发与重定向说明：
+
+- 重定向：浏览器地址栏会变，客户端会再次发送请求
+- 转发：浏览器地址栏不变，数据保留在同一次请求中
+
+相关文件：
+
+- `src/main/java/org/example/servlet/LoginServlet.java`
+- `src/main/webapp/login.jsp`
+- `src/main/webapp/loginSuccess.jsp`
+
+访问示例：
+
+```text
+http://localhost:8080/sencondTest/login.jsp
+```
+
 ## 说明
 
 - 本项目主要用于 Java Web 实验练习
-- 页面使用 JSP 直接编写，便于学习表单提交、请求转发与重定向等基础知识
+- 页面使用 JSP 与 Servlet 配合编写，便于学习表单提交、请求转发与重定向等基础知识
 - 仓库已忽略 IntelliJ IDEA 和 Smart Tomcat 的本地配置文件
