@@ -1,32 +1,12 @@
 # sencondTest
 
-一个基于 JSP 和 Maven 的 Java Web 练习项目，适合用于 JSP 基础语法、页面跳转、表单提交与 `request` 对象使用等实验。
+一个基于 JSP、Servlet 和 Maven 的 Java Web 练习项目，当前已经按课程用途分为 `课内实验` 和 `实验课` 两组，便于在 GitHub 中分类查看和后续继续补充。
 
-## 项目环境
+## 运行环境
 
 - JDK 8 及以上
 - Maven 3.x
 - Tomcat 8/9
-
-## 项目结构
-
-```text
-sencondTest
-├── pom.xml
-└── src
-    └── main
-        ├── java
-        │   └── org
-        │       └── example
-        │           └── servlet
-        │               └── LoginServlet.java
-        └── webapp
-            ├── login.jsp
-            ├── server.jsp
-            ├── loginSuccess.jsp
-            ├── requestInfo.jsp
-            └── 其他 JSP 实验页面
-```
 
 ## 运行方式
 
@@ -45,11 +25,60 @@ mvn clean package
 
 3. 将生成的 `target/sencondTest.war` 部署到 Tomcat。
 
-4. 启动 Tomcat 后，在浏览器中访问对应页面。
+4. 启动 Tomcat 后在浏览器中访问对应实验页面。
 
-## 实验内容
+## 仓库分组
 
-### 1. request 对象信息获取实验
+### 1. 课内实验
+
+当前已整理：
+
+- 课内实验 1：Servlet 登录验证实验
+
+说明文档：
+
+- `coursework/exp1/README.md`
+
+相关代码：
+
+- `src/main/java/org/example/servlet/LoginServlet.java`
+- `src/main/webapp/login.jsp`
+- `src/main/webapp/loginSuccess.jsp`
+
+访问地址：
+
+```text
+http://localhost:8080/sencondTest/login.jsp
+```
+
+### 2. 实验课
+
+当前已整理：
+
+- 实验课 1：JSP 应用实验
+
+说明文档：
+
+- `lab/exp1/README.md`
+
+相关代码：
+
+- `src/main/webapp/lab/exp1/login.jsp`
+- `src/main/webapp/lab/exp1/manger_control.jsp`
+- `src/main/webapp/lab/exp1/welcome.jsp`
+- `src/main/webapp/lab/exp1/forbid.jsp`
+- `src/main/webapp/lab/exp1/errorhandle.jsp`
+- `src/main/webapp/lab/exp1/links.jsp`
+
+访问地址：
+
+```text
+http://localhost:8080/sencondTest/lab/exp1/login.jsp
+```
+
+## 已完成实验
+
+### request 对象信息获取实验
 
 页面：`requestInfo.jsp`
 
@@ -63,36 +92,25 @@ mvn clean package
 - 获取请求 URI
 - 获取协议名称
 
-访问示例：
+访问地址：
 
 ```text
 http://localhost:8080/sencondTest/requestInfo.jsp
 ```
 
-### 2. JSP 登录验证实验
+### JSP 登录验证实验
 
 页面流程：
 
 `login.jsp` -> `server.jsp` -> `loginSuccess.jsp`
 
-功能说明：
-
-- 在 `login.jsp` 中输入用户名和密码并提交
-- 在 `server.jsp` 中进行登录校验
-- 正确账号密码为：
-  - 用户名：`zhangsan`
-  - 密码：`123`
-- 验证成功后提示“3秒钟后进入 loginSuccess.jsp 页面”
-- 3 秒后自动跳转到 `loginSuccess.jsp`
-- 如果输入错误，则重新定向回 `login.jsp`
-
-访问示例：
+访问地址：
 
 ```text
 http://localhost:8080/sencondTest/login.jsp
 ```
 
-### 3. JSP + Servlet 登录验证实验
+### JSP + Servlet 登录验证实验
 
 页面流程：
 
@@ -102,33 +120,8 @@ Servlet 映射：
 
 `/loginServlet`
 
-功能说明：
-
-- `login.jsp` 通过表单向 `LoginServlet` 提交用户名和密码
-- 当用户名或密码为空时，Servlet 使用重定向返回 `login.jsp`
-- 当用户名为 `zhangsan` 且密码为 `123` 时，Servlet 使用请求转发进入 `loginSuccess.jsp`
-- `loginSuccess.jsp` 显示用户输入的用户名和密码
-- 当账号密码填写完整但不正确时，Servlet 同样重定向回 `login.jsp`
-
-转发与重定向说明：
-
-- 重定向：浏览器地址栏会变，客户端会再次发送请求
-- 转发：浏览器地址栏不变，数据保留在同一次请求中
-
-相关文件：
-
-- `src/main/java/org/example/servlet/LoginServlet.java`
-- `src/main/webapp/login.jsp`
-- `src/main/webapp/loginSuccess.jsp`
-
-访问示例：
-
-```text
-http://localhost:8080/sencondTest/login.jsp
-```
-
 ## 说明
 
-- 本项目主要用于 Java Web 实验练习
-- 页面使用 JSP 与 Servlet 配合编写，便于学习表单提交、请求转发与重定向等基础知识
-- 仓库已忽略 IntelliJ IDEA 和 Smart Tomcat 的本地配置文件
+- 本项目主要用于 Java Web 课程练习与实验提交
+- 仓库已按 `课内实验 / 实验课` 做了分组整理
+- 本地 IDE 和 Smart Tomcat 配置文件已忽略，不会提交到远程仓库
