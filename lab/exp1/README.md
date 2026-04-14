@@ -25,3 +25,8 @@
 ```text
 http://localhost:8080/sencondTest/lab/exp1/login.jsp
 ```
+
+## 实验报告
+
+- `lab/exp1/report/实验课1_实验报告_最终版.docx`
+- `lab/exp1/report/实验课1_实验报告_最终版.html`

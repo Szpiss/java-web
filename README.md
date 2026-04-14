@@ -38,6 +38,7 @@ mvn clean package
 说明文档：
 
 - `coursework/exp1/README.md`
+- `coursework/exp1/report/README.md`
 
 相关代码：
 
@@ -60,6 +61,7 @@ http://localhost:8080/sencondTest/login.jsp
 说明文档：
 
 - `lab/exp1/README.md`
+- `lab/exp1/report/README.md`
 
 相关代码：
 
@@ -124,4 +126,5 @@ Servlet 映射：
 
 - 本项目主要用于 Java Web 课程练习与实验提交
 - 仓库已按 `课内实验 / 实验课` 做了分组整理
+- 报告目录也已分开：`coursework/exp1/report/` 对应课内实验，`lab/exp1/report/` 对应实验课
 - 本地 IDE 和 Smart Tomcat 配置文件已忽略，不会提交到远程仓库
