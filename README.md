@@ -34,17 +34,22 @@ mvn clean package
 当前已整理：
 
 - 课内实验 1：Servlet 登录验证实验
+- 课内实验 2：JSP + Bean 长方形计算实验
 
 说明文档：
 
 - `coursework/exp1/README.md`
 - `coursework/exp1/report/README.md`
+- `coursework/exp2/README.md`
 
 相关代码：
 
 - `src/main/java/org/example/servlet/LoginServlet.java`
 - `src/main/webapp/login.jsp`
 - `src/main/webapp/loginSuccess.jsp`
+- `src/main/java/org/example/bean/Rectangle.java`
+- `src/main/webapp/rectangle/inputRectangle.jsp`
+- `src/main/webapp/rectangle/showRectangle.jsp`
 
 访问地址：
 
