@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.bigwork.mapper.UserMapper">
+    <resultMap id="UserResultMap" type="org.example.bigwork.entity.User">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="realName" column="real_name"/>
+        <result property="studentNo" column="student_no"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="org.example.bigwork.entity.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO users (username, password, real_name, student_no)
+        VALUES (#{username}, #{password}, #{realName}, #{studentNo})
+    </insert>
+
+    <select id="findByUsernameAndPassword" resultMap="UserResultMap">
+        SELECT id, username, password, real_name, student_no
+        FROM users
+        WHERE username = #{username} AND password = #{password}
+    </select>
+
+    <select id="findByUsername" resultMap="UserResultMap">
+        SELECT id, username, password, real_name, student_no
+        FROM users
+        WHERE username = #{username}
+    </select>
+
+    <select id="findAll" resultMap="UserResultMap">
+        SELECT id, username, password, real_name, student_no
+        FROM users
+        ORDER BY id
+    </select>
+
+    <update id="update" parameterType="org.example.bigwork.entity.User">
+        UPDATE users
+        SET username = #{username},
+            password = #{password},
+            real_name = #{realName},
+            student_no = #{studentNo}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM users
+        WHERE id = #{id}
+    </delete>
+</mapper>

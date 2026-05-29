@@ -38,6 +38,7 @@ build/
 
 ### Local run config ###
 .smarttomcat/
+tmp/
 
 ### Mac OS ###
 .DS_Store
