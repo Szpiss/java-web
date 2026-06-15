@@ -83,3 +83,9 @@ src/main/resources/application.properties
 - `experiments/` 和 `bigwork/` 是提交归档目录，包含 README、报告和截图素材。
 - `src/main` 是统一可运行源码目录，README 中已列出各实验对应源码。
 - `target/`、IDE 配置、Smart Tomcat 配置和系统临时文件已通过 `.gitignore` 排除。
+
+## 课程仓库整理规则
+
+- 同一门 Java Web 课程的实验和大作业统一保存在本仓库，不再拆分成多个重复仓库。
+- 新增实验时同步补充 `experiments/exp*/README.md`、报告目录和根 README 表格。
+- 修改大作业时同步更新 `bigwork/README.md` 和数据库说明，保证 GitHub 页面能直接看懂运行入口。
