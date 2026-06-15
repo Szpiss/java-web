@@ -58,10 +58,11 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public String register(@ModelAttribute User user, RedirectAttributes redirectAttributes) {
+    public String register(@ModelAttribute User user, Model model, RedirectAttributes redirectAttributes) {
         if (userService.register(user)) {
-            redirectAttributes.addFlashAttribute("message", "注册成功，请使用新账号登录。");
-            return "redirect:/bigwork/login";
+            model.addAttribute("message", "注册成功，请使用新账号登录。");
+            model.addAttribute("user", user);
+            return "bigwork/login";
         }
         redirectAttributes.addFlashAttribute("message", "注册失败，用户名不能为空或已存在。");
         redirectAttributes.addFlashAttribute("user", user);

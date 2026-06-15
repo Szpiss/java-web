@@ -11,7 +11,7 @@
         <result property="studentNo" column="student_no"/>
     </resultMap>
 
-    <insert id="insert" parameterType="org.example.bigwork.entity.User" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insert" parameterType="org.example.bigwork.entity.User">
         INSERT INTO users (username, password, real_name, student_no)
         VALUES (#{username}, #{password}, #{realName}, #{studentNo})
     </insert>
