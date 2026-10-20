@@ -26,4 +26,4 @@ http://localhost:8080/sencondTest/lifeCycleServlet
 
 ## 实验报告
 
-- `experiments/exp3/report/javaweb开发基础课内实验三 2315302125 崔子霖.docx`
+- `experiments/exp3/report/javaweb开发基础课内实验三 2023000001 张三.docx`

@@ -25,8 +25,8 @@ public class UserController {
     public String loginPage(Model model) {
         if (!model.containsAttribute("user")) {
             User user = new User();
-            user.setUsername("崔子霖");
-            user.setPassword("2315302125");
+            user.setUsername("张三");
+            user.setPassword("2023000001");
             model.addAttribute("user", user);
         }
         return "bigwork/login";
@@ -48,10 +48,10 @@ public class UserController {
     public String registerPage(Model model) {
         if (!model.containsAttribute("user")) {
             User user = new User();
-            user.setUsername("崔子霖");
-            user.setPassword("2315302125");
-            user.setRealName("崔子霖");
-            user.setStudentNo("2315302125");
+            user.setUsername("张三");
+            user.setPassword("2023000001");
+            user.setRealName("张三");
+            user.setStudentNo("2023000001");
             model.addAttribute("user", user);
         }
         return "bigwork/register";

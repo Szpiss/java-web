@@ -11,7 +11,7 @@
 <main class="page">
     <section class="panel">
         <h1>Spring Boot + Spring + MyBatis 用户管理系统</h1>
-        <p class="subtitle">姓名：崔子霖　学号：2315302125</p>
+        <p class="subtitle">姓名：张三　学号：2023000001</p>
         <c:if test="${not empty message}">
             <p class="message">${message}</p>
         </c:if>

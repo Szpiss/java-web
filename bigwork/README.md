@@ -40,8 +40,8 @@ http://localhost:8080/sencondTest/bigwork/login
 ## 默认账号
 
 ```text
-用户名：崔子霖
-密码：2315302125
+用户名：张三
+密码：2023000001
 ```
 
 ## 数据库说明
@@ -63,5 +63,5 @@ spring.datasource.password=
 
 ## 作业报告
 
-- `bigwork/report/javaweb开发基础大作业 2315302125 崔子霖.docx`
+- `bigwork/report/javaweb开发基础大作业 2023000001 张三.docx`
 - `bigwork/report/assets/`

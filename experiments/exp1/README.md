@@ -28,5 +28,5 @@ http://localhost:8080/sencondTest/lab/exp1/login.jsp
 
 ## 实验报告
 
-- `experiments/exp1/report/javaweb开发基础课内实验一 2315302125 崔子霖.docx`
+- `experiments/exp1/report/javaweb开发基础课内实验一 2023000001 张三.docx`
 - `experiments/exp1/report/images/`

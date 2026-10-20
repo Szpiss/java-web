@@ -1,6 +1,6 @@
 INSERT INTO users (username, password, real_name, student_no)
-SELECT '崔子霖', '2315302125', '崔子霖', '2315302125'
-WHERE NOT EXISTS (SELECT 1 FROM users WHERE username = '崔子霖');
+SELECT '张三', '2023000001', '张三', '2023000001'
+WHERE NOT EXISTS (SELECT 1 FROM users WHERE username = '张三');
 
 INSERT INTO users (username, password, real_name, student_no)
 SELECT 'teacher', '123456', '测试教师', 'T001'

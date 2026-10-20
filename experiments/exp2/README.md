@@ -25,6 +25,6 @@ http://localhost:8080/sencondTest/coursework/exp2_session/visit_count.jsp
 
 ## 实验报告
 
-- `experiments/exp2/report/javaweb开发基础课内实验二 2315302125 崔子霖.docx`
+- `experiments/exp2/report/javaweb开发基础课内实验二 2023000001 张三.docx`
 - `experiments/exp2/report/assets/`
 - `experiments/exp2/report/assets_compressed/`
